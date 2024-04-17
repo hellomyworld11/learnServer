@@ -161,6 +161,11 @@ tcp 连接状态图:
 #### libevent
 
 ```C++
+参考资料：
+    https://www.bookstack.cn/read/libevent/b236c04b0521cc67.md
+	https://libevent.org/libevent-book/01_intro.html
+	https://cppguide.cn/pages/ff146c/	
+
 1. 创建event_base (Reactor 实例)
 2. 创建事件处理器(包含 句柄，事件类型 回调函数) 加入event_base
 3. 读写管理使用 bufferevent
