@@ -166,6 +166,7 @@ tcp 连接状态图:
 	https://libevent.org/libevent-book/01_intro.html
 	https://cppguide.cn/pages/ff146c/	
 
+
 1. 创建event_base (Reactor 实例)
 2. 创建事件处理器(包含 句柄，事件类型 回调函数) 加入event_base
 3. 读写管理使用 bufferevent
@@ -186,6 +187,10 @@ evhttp 使用
   event_base_dispatch
 
 ```
+
+#### 反应堆模式
+
+![image-20240422141957099](README.assets/image-20240422141957099.png)
 
 #### makefile
 
