@@ -325,6 +325,24 @@ quit  退出gdb调试
 
 ### 类图
 
+![类图](README.assets/webserver类图.drawio.png)
+
+### 流程图
+
+![流程图](README.assets/webserver流程图-主流程.drawio.png)
+
+### 技术点
+
++ 
+
+```
+定时器处理非活动连接    http主从状态机   线程池 
+```
+
+
+
+
+
 ## 系统编程
 
 ### 1.进程
