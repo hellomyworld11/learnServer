@@ -31,6 +31,9 @@ route: 查看路由表
 etc/services  这个文件是知名服务端口号定义文件
 tcpdump 抓包工具 : sudo tcpdump -i lo port 9999  检测回环地址  端口 9999 的tcp数据
 nc   可以测试服务器  
+telnet 测试
+
+用 strace 查看系统调用
 ```
 
 #### 传输层协议
@@ -274,17 +277,29 @@ systemctl restart mysql;  # 重启mysql
 
 ```C++
 编译时需要加 -g
-gdb 程序名
-list 显示代码
-next 下一行，不进入函数内
-step 下一行，会进入函数内
-b  断点
-run 运行
-until   运行到第多少行
-finish  跳出函数
-backtrace  调用堆栈
-print  打印值
-quit  退出gdb调试
+cmake构建cmakefile.txt时加入 ：  set(CMAKE_BUILD_TYPE Debug)  # 自动启用 -g
+    
+启动和关闭：    
+	gdb 程序名
+    gdb -p <PID> 附加到进程
+    quit  退出gdb调试
+断点：
+    b  *.cpp:行号  加断点
+	info b 查看所有断点信息
+    delete 1  删除断点1
+运行:
+	next 下一行，不进入函数内
+	step 下一行，会进入函数内
+    continue 执行到下一断点
+     run 运行
+	finish  跳出函数
+ 查看:
+	list 显示代码
+     list *$rip 显示当前执行所在代码
+	until   运行到第多少行
+	backtrace  调用堆栈
+	print  打印值
+
 ```
 
 
